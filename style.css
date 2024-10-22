@@ -19,7 +19,6 @@ nav{
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    border: 2px;
     padding: 15px;         /* Espace à l'intérieur du rectangle */
     box-shadow: 0px 2px 5px transparent;
     background-color: whitesmoke;
@@ -186,7 +185,7 @@ iframe{
     height: calc(30vw * 9 / 16); /* Maintient le ratio 16:9 */
 }
 
-.gauche ul{
+.footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -198,12 +197,12 @@ iframe{
     position: relative;
 }
 
-.gauche li{
-    list-style-type: none;
+.gauche1 li{
+    margin-left: 20%;
     flex-grow: 0;
 }
 
-.gauche a:hover{
+.footer a:hover{
     color: black;
     text-decoration: underline;
 }
