@@ -140,17 +140,17 @@ a{
 
 .bouton{
     display: flex;
+    gap: 20%;
     margin-bottom: 3%;
 }
 
 .BDLG{
-    margin-right: 20%;
-    margin-left: -20%;
     background-color: rgb(143, 221, 254); /* couleur initiale */
     color: black;
     padding: 10px 20px;
     border: 2px solid black;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .BDLG:hover{
@@ -159,13 +159,12 @@ a{
 }
 
 .BDLD{
-    margin-right: -20%;
-    margin-left: 20%;
     background-color: rgb(143, 221, 254); /* couleur initiale */
     color: black;
     padding: 10px 20px;
     border: 2px solid black;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .BDLD:hover{
