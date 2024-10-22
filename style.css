@@ -8,6 +8,16 @@ body{
     background-color: white;
 }
 
+.couleur_fond{
+    width: 35%; /* Un tiers de la largeur de l'écran */
+    height: 100%; /* Prend toute la hauteur de la fenêtre */
+    background-color: royalblue; /* Couleur de fond souhaitée */
+    position: fixed; /* Fixe le div sur le côté droit */
+    right: 0; /* Positionne à droite */
+    top: 0;
+    z-index: -1; /* Met la section derrière les autres éléments */
+}
+
 nav{
     position: fixed;
     width: 100%;
@@ -17,6 +27,7 @@ nav{
 .navbar{
     display: flex;
     justify-content: space-around;
+    text-align: center;
     align-items: center;
     align-content: center;
     padding: 15px;         /* Espace à l'intérieur du rectangle */
@@ -63,18 +74,9 @@ a{
     display: block; /* Afficher les sous-liens au survol */
 }
 
-.couleur_fond{
-    width: 35%; /* Un tiers de la largeur de l'écran */
-    height: 100vh; /* Prend toute la hauteur de la fenêtre */
-    background-color: royalblue; /* Couleur de fond souhaitée */
-    position: fixed; /* Fixe le div sur le côté droit */
-    right: 0; /* Positionne à droite */
-    z-index: -1; /* Met la section derrière les autres éléments */
-}
-
 .présentation{
     display: flex;
-    margin-top: 2%;
+    margin-top: 4%;
 }
 
 .présentation_gauche{
@@ -185,6 +187,7 @@ iframe{
 }
 
 .footer{
+    bottom: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
