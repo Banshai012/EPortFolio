@@ -18,10 +18,21 @@ body{
     z-index: -1; /* Met la section derrière les autres éléments */
 }
 
+.couleur_fond2{
+    width: 100%; /* Un tiers de la largeur de l'écran */
+    height: 100%; /* Prend toute la hauteur de la fenêtre */
+    background-color: royalblue; /* Couleur de fond souhaitée */
+    position: fixed; /* Fixe le div sur le côté droit */
+    right: 0; /* Positionne à droite */
+    top: 0;
+    z-index: -1; /* Met la section derrière les autres éléments */
+}
+
 nav{
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1000;
 }
 
 .navbar{
@@ -82,7 +93,7 @@ a{
 .présentation_gauche{
     display: flex;
     text-align: center;
-    margin-left: 20%;
+    margin-left: 19.5%;
     margin-top: 12%;
     width: 30%;
     flex-direction: column;
@@ -101,6 +112,7 @@ a{
 }
 
 .présentation_droite{
+    margin-left: 1%;
     display: flex;
     text-align: center;
     width: 30%;
@@ -119,7 +131,8 @@ a{
 
 .nom{
     margin-top: 5%;
-    font-family: "Sixtyfour Convergence", sans-serif;
+    color: black;
+    font-family: "Sixtyfour", sans-serif;
     font-size: 3vw;
 }
 
@@ -190,7 +203,7 @@ iframe{
     margin-top: 1%;
     bottom: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     align-content: center;
     border: 10px;
@@ -201,12 +214,64 @@ iframe{
     white-space: nowrap;
 }
 
-.gauche li{
-    margin-left: 20%;
-    flex-grow: 0;
+.gauche{
+    display: flex;
+    gap: 20%;
+    justify-content: space-between;
+    margin-left: 2%;
+}
+
+.prout{
+    list-style-type: none;
+}
+
+.droite{
+    display: flex;
+    gap: 20%;
+    justify-content: space-between;
+    text-align: center;
+    margin-right: 8%;
+}
+
+.droite li{
+    list-style-type: none;
 }
 
 .footer a:hover{
     color: black;
     text-decoration: underline;
+}
+
+.texte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: left;
+    left: 30%;
+    width: 40%;
+    height: auto;
+    top: 100px;
+    position: relative;
+}
+
+.texte ul li{
+}
+
+.titre{
+    background-color: royalblue;
+    text-align: center;
+    padding: 8vw;
+    position: relative;
+}
+
+.titre p{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    top: 30px;
+    color: black;
+    font-family: "Sixtyfour", sans-serif;
+    font-size: 6vw;
+    position: relative;
 }
