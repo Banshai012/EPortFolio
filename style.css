@@ -49,7 +49,7 @@ nav{
 
 .navbar li{
     list-style-type: none;
-    flex-grow: 1;
+    flex-grow: 0;
 }
 
 a{
