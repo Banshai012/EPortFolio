@@ -159,35 +159,6 @@ a{
     margin-bottom: 3%;
 }
 
-.BDLG{
-    background-color: rgb(143, 221, 254); /* couleur initiale */
-    color: black;
-    font-size: 1vw;
-    padding: 10px 20px;
-    border: 2px solid black;
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-.BDLG:hover{
-    color: black;
-    background-color: rgb(250, 87, 87);
-}
-
-.BDLD{
-    background-color: rgb(143, 221, 254); /* couleur initiale */
-    color: black;
-    font-size: 1vw;
-    padding: 10px 20px;
-    border: 2px solid black;
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-.BDLD:hover{
-    color: black;
-    background-color: rgb(250, 87, 87);
-}
 
 iframe{
     margin-top: 5vw;
