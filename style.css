@@ -204,7 +204,22 @@ iframe{
 }
 
 .footer{
-    margin-top: 1%;
+    top: 1vw;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    border: 10px;
+    padding: 15px;         /* Espace à l'intérieur du rectangle */
+    box-shadow: 0px 2px 5px transparent;
+    background-color: whitesmoke;
+    position: relative;
+    white-space: nowrap;
+}
+
+.footer2{
+    top: 7vw;
     bottom: 0;
     display: flex;
     justify-content: space-between;
@@ -261,14 +276,21 @@ iframe{
     position: relative;
 }
 
-.titre{
-    display: flex;
-    background-color: royalblue;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    padding: 6vw;
-    position: relative;
+.texte h1{
+    font-family:"Fuzzy Bubbles", sans-serif ;
+}
+
+.texte p{
+    font-family:"Fuzzy Bubbles", sans-serif ;
+}
+
+.texte li{
+    font-family:"Fuzzy Bubbles", sans-serif ;
+}
+
+.texte a{
+    text-decoration: underline;
+    font-family:"Fuzzy Bubbles", sans-serif ;
 }
 
 .texte2{
@@ -280,6 +302,123 @@ iframe{
     width: 40%;
     height: auto;
     top: 120px;
+    position: relative;
+}
+
+.texte2 p{
+    font-family:"Fuzzy Bubbles", sans-serif ;
+}
+
+.texte3{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: left;
+    align-content: center;
+    text-align: left;
+    left: 30%;
+    width: 40%;
+    height: auto;
+    top: 100px;
+    position: relative;
+}
+
+.texte3 h1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    left: 30%;
+    width: 40%;
+    height: auto;
+    position: relative;
+    font-family:"Fuzzy Bubbles", sans-serif ;
+}
+
+.texte3 h2{
+    font-family:"Fuzzy Bubbles", sans-serif ;
+}
+
+.texte3 p{
+    font-family:"Fuzzy Bubbles", sans-serif ;
+}
+
+.texte3 a{
+    text-decoration: underline;
+    font-family:"Fuzzy Bubbles", sans-serif ;
+}
+
+.texte4{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: left;
+    align-content: center;
+    text-align: left;
+    left: 30%;
+    width: 40%;
+    height: auto;
+    top: 100px;
+    position: relative;
+}
+
+.texte4 h1{
+    text-align: center;
+    font-family:"Fuzzy Bubbles", sans-serif ;
+}
+
+.texte4 ul li{
+    left: 2vw;
+    position: relative;
+    font-family:"Fuzzy Bubbles", sans-serif ;
+}
+
+.texte4 p{
+    font-family:"Fuzzy Bubbles", sans-serif ;
+}
+
+.texte4 a{
+    text-decoration: underline;
+    font-family:"Fuzzy Bubbles", sans-serif ;
+}
+
+.texte5{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: left;
+    align-content: center;
+    text-align: left;
+    left: 30%;
+    width: 40%;
+    height: auto;
+    top: 100px;
+    position: relative;
+}
+
+.texte5 h1{
+    text-align: center;
+    font-family:"Fuzzy Bubbles", sans-serif ;
+}
+
+.texte5 p{
+    font-family:"Fuzzy Bubbles", sans-serif ;
+}
+
+.texte5 a{
+    text-decoration: underline;
+    font-family:"Fuzzy Bubbles", sans-serif ;
+}
+
+.titre{
+    display: flex;
+    background-color: royalblue;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 6vw;
     position: relative;
 }
 
