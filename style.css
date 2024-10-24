@@ -21,7 +21,7 @@ body{
 .couleur_fond2{
     width: 100%; /* Un tiers de la largeur de l'écran */
     height: 100%; /* Prend toute la hauteur de la fenêtre */
-    background-color: royalblue; /* Couleur de fond souhaitée */
+    background-color: rgb(66, 145, 248); /* Couleur de fond souhaitée */
     position: fixed; /* Fixe le div sur le côté droit */
     right: 0; /* Positionne à droite */
     top: 0;
@@ -187,11 +187,6 @@ a{
     background-color: rgb(250, 87, 87);
 }
 
-.t{
-    font-family: "Dancing Script", cursive;
-    font-size: 1.1vw;
-}
-
 iframe{
     margin-top: 5vw;
     margin-left: 35vw;
@@ -230,7 +225,8 @@ iframe{
     gap: 20%;
     justify-content: space-between;
     text-align: center;
-    margin-right: 8%;
+    position: relative;
+    right: 9vw;
 }
 
 .droite li{
@@ -257,9 +253,12 @@ iframe{
 }
 
 .titre{
+    display: flex;
     background-color: royalblue;
+    align-items: center;
+    align-content: center;
     text-align: center;
-    padding: 8vw;
+    padding: 6vw;
     position: relative;
 }
 
@@ -284,4 +283,48 @@ iframe{
     font-family: "Sixtyfour", sans-serif;
     font-size: 6vw;
     position: relative;
+}
+
+.semester{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: left;
+    position: relative;
+    gap: 3vw;
+    top: 2vw;
+    font-size: 2vw;
+    width: 80%;
+}
+
+.semester p{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    width: 64%;
+    left: 3vw;
+    font-family: "Fuzzy Bubbles", sans-serif;
+    font-size: 1.4vw;
+    position: relative;
+    left: 10vw
+}
+
+.semester h2{
+    font-family: "Bubblegum Sans", sans-serif;
+    position: relative;
+    bottom: 1.2vw;
+}
+
+.semester ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2vw;
+    font-size: 1.3vw;
+}
+
+.semester li{
+    position: relative;
+    left: 4vw;
 }
