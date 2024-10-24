@@ -157,6 +157,8 @@ a{
     display: flex;
     gap: 20%;
     margin-bottom: 3%;
+    right: 1vw;
+    position: relative;
 }
 
 .BDLG{
