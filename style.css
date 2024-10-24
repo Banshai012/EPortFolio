@@ -162,7 +162,6 @@ a{
 .BDLG{
     background-color: rgb(143, 221, 254); /* couleur initiale */
     color: black;
-    font-size: 1vw;
     padding: 10px 20px;
     border: 2px solid black;
     cursor: pointer;
@@ -177,7 +176,6 @@ a{
 .BDLD{
     background-color: rgb(143, 221, 254); /* couleur initiale */
     color: black;
-    font-size: 1vw;
     padding: 10px 20px;
     border: 2px solid black;
     cursor: pointer;
@@ -187,6 +185,11 @@ a{
 .BDLD:hover{
     color: black;
     background-color: rgb(250, 87, 87);
+}
+
+.fontCV{
+    font-family: "Dancing Script", cursive;
+    font-size: 1.1vw;
 }
 
 iframe{
