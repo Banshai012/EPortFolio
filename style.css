@@ -257,7 +257,7 @@ iframe{
     list-style-type: none;
 }
 
-.footer a:hover{
+.gauche a:hover{
     color: black;
     text-decoration: underline;
 }
