@@ -476,3 +476,42 @@ iframe{
     position: relative;
     left: 4vw;
 }
+
+.contenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin-top: 2vw;
+}
+
+.londres{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    position: relative;
+    margin-left: 9vw;
+    gap: 2%;
+}
+
+.contenu img{
+    width: 40%;
+    height: auto;
+    border-radius: 12%;
+}
+
+.contenu div div{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: auto;
+    position: relative;
+}
+
+.contenu h1{
+    font-family: "Fuzzy Bubbles", sans-serif;
+}
+
+.contenu p{
+    font-family: "Fuzzy Bubbles", sans-serif;
+}
