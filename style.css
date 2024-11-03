@@ -204,6 +204,7 @@ iframe{
 }
 
 .footer{
+    margin-top: auto;
     top: 1vw;
     bottom: 0;
     display: flex;
@@ -244,13 +245,31 @@ iframe{
     list-style-type: none;
 }
 
-.droite{
+.droite {
     display: flex;
-    gap: 20%;
+    gap: 10%; /* Ajustement de l'espacement */
+    justify-items: center;
+    justify-content: center;
     justify-content: space-between;
     text-align: center;
-    position: relative;
-    right: 9vw;
+    padding: 0 5vw; /* Ajout de padding pour éviter le débordement */
+    flex-wrap: wrap; /* Permet aux éléments de se déplacer à la ligne */
+}
+
+.droite1, .droite2, .droite3 {
+    flex: 1; /* Ajustement flexible */
+    min-width: 100px; /* Largeur minimale pour éviter l'empilement */
+}
+
+@media (max-width: 768px) {
+    .gauche{
+        flex-direction: column; /* Empile les éléments sur petits écrans */
+        align-items: center; /* Centre les éléments */
+    }
+    .droite {
+        flex-direction: column; /* Empile les éléments sur petits écrans */
+        align-items: center; /* Centre les éléments */
+    }
 }
 
 .droite li{
