@@ -4,7 +4,7 @@ Hello, my name is Benjamin Krief. I'm currently a Computer Science and Telecommu
 
 _________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-In my future studies, I am eager to delve into three exciting fields: cybersecurity, artificial intelligence, and video games.
+In my future studies, I am excited to explore three dynamic fields: cybersecurity, artificial intelligence, and video games.
 
 First, in cybersecurity, I aspire to follow in the footsteps of industry leaders like Kevin Mitnick, a renowned hacker turned security consultant. His work emphasizes the importance of protecting data and systems from cyber threats, and I aim to contribute to this critical field by developing robust security solutions.
 
