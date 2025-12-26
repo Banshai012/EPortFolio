@@ -1,536 +1,300 @@
-*{
-    margin: 0px;
-    padding: 0px;
+/* RESET & GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
     font-family: sans-serif;
+    box-sizing: border-box; /* Très important pour gérer les largeurs correctement */
 }
 
-body{
+body {
     background-color: white;
+    /* On ajoute un padding-top pour ne pas que le contenu soit caché sous la navbar fixe */
+    padding-top: 80px; 
+    line-height: 1.6;
 }
 
-.couleur_fond{
-    width: 35%; /* Un tiers de la largeur de l'écran */
-    height: 100%; /* Prend toute la hauteur de la fenêtre */
-    background-color: royalblue; /* Couleur de fond souhaitée */
-    position: fixed; /* Fixe le div sur le côté droit */
-    right: 0; /* Positionne à droite */
+/* LA BANDE BLEUE DE FOND */
+.couleur_fond {
+    width: 35%;
+    height: 100%;
+    background-color: royalblue;
+    position: fixed;
+    right: 0;
     top: 0;
-    z-index: -1; /* Met la section derrière les autres éléments */
+    z-index: -1;
 }
 
-.couleur_fond2{
-    width: 100%; /* Un tiers de la largeur de l'écran */
-    height: 100%; /* Prend toute la hauteur de la fenêtre */
-    background-color: rgb(66, 145, 248); /* Couleur de fond souhaitée */
-    position: fixed; /* Fixe le div sur le côté droit */
-    right: 0; /* Positionne à droite */
-    top: 0;
-    z-index: -1; /* Met la section derrière les autres éléments */
-}
-
-nav{
+/* NAVIGATION */
+nav {
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-}
-
-.navbar{
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    padding: 15px;         /* Espace à l'intérieur du rectangle */
-    box-shadow: 0px 2px 5px transparent;
     background-color: whitesmoke;
-    position: relative;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 }
 
-.navbar li{
-    list-style-type: none;
-    flex-grow: 0;
+.navbar {
+    display: flex;
+    justify-content: center; /* Centre les éléments */
+    flex-wrap: wrap; /* Permet aux liens de passer à la ligne si l'écran est petit */
+    gap: 20px; /* Espace entre les liens */
+    padding: 15px;
+    list-style: none;
 }
 
-a{
+.navbar a {
     text-decoration: none;
     color: black;
-    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
-.navbar a:hover{
-    color: black;
+.navbar a:hover {
     text-decoration: underline;
 }
 
-.dropdown-content {
-    display: none; /* Cacher les sous-liens */
-    position: absolute;
-    background-color: whitesmoke;
-    min-width: 150px;
+/* Dropdown styling simplifié */
+.dropdown {
+    position: relative;
 }
 
-.dropdown-content li {
-    margin: 0;
-}
-
-.dropdown-content li a {
-    display: block;
-    padding: 10px;
-    background-color: whitesmoke;
-    color: black;
-}
-
-.dropdown:hover .dropdown-content{
-    display: block; /* Afficher les sous-liens au survol */
-}
-
-.présentation{
+/* MISE EN PAGE PRINCIPALE (Container) */
+/* On crée une classe utilitaire pour centrer le contenu sans marges bizarres */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
-    margin-top: 4%;
-}
-
-.présentation_gauche{
-    display: flex;
-    text-align: center;
-    margin-left: 19.5%;
-    margin-top: 12%;
-    width: 30%;
     flex-direction: column;
-    align-items: center;
-    background-color: white;
 }
 
-.hi{
-    font-family: "Bubblegum Sans", sans-serif;
-    font-size: 6vw;
-}
-
-.me{
-    font-family: "Fuzzy Bubbles", sans-serif;
-    font-size: 1.3vw;
-}
-
-.présentation_droite{
-    margin-left: 1%;
+/* SECTION PRÉSENTATION (HOME) */
+.présentation {
     display: flex;
-    text-align: center;
-    width: 30%;
+    flex-direction: row;
+    justify-content: space-between; /* Espace entre le texte et la carte profil */
+    align-items: center;
+    margin-top: 40px;
+    gap: 40px;
+    padding: 0 5%; /* Marge de sécurité sur les côtés */
+}
+
+.présentation_gauche {
+    flex: 1; /* Prend l'espace disponible */
+    text-align: left;
+}
+
+.hi {
+    font-family: "Bubblegum Sans", sans-serif;
+    font-size: 4rem; /* Taille fixe responsive */
+    color: royalblue;
+}
+
+.me {
+    font-family: "Fuzzy Bubbles", sans-serif;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+/* CARD PROFIL (DROITE) */
+.présentation_droite {
+    flex: 1;
+    display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(66, 145, 248);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    color: white;
 }
 
 .monImage {
-    margin-top: 3%;
-    border-radius: 20%;
-    box-shadow: 0px transparent;
-    width: 60%;
-    height: auto
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Empêche l'image d'être déformée */
+    border-radius: 50%;
+    border: 4px solid white;
 }
 
-.nom{
-    margin-top: 5%;
-    color: black;
+.nom {
+    margin-top: 20px;
     font-family: "Sixtyfour", sans-serif;
-    font-size: 3vw;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.2;
+    color: white;
 }
 
-.sep{
-    border: black;
-    width: 20%;
-    height: 3px;
-    background-color: black;
-    margin: 20px 0; /* Espace autour du trait */
+.etude {
+    text-align: center;
+    font-size: 1rem;
+    margin: 10px 0;
 }
 
-.etude{
-    font-size: 1.5vw;
-    font-weight: lighter;
+.sep {
+    width: 50%;
+    height: 2px;
+    background-color: white;
+    border: none;
+    margin: 15px 0;
 }
 
-.ecole{
-    text-decoration: underline;
-}
-
-.bouton{
+/* BOUTONS CV */
+.bouton {
     display: flex;
-    align-content: center;
-    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20%;
-    margin-bottom: 3%;
-    position: relative;
 }
 
-.BDLG{
-    background-color: rgb(143, 221, 254); /* couleur initiale */
-    color: black;
+button {
+    background-color: rgb(143, 221, 254);
+    border: 2px solid white;
     padding: 10px 20px;
-    border: 2px solid black;
     cursor: pointer;
-    white-space: nowrap;
-}
-
-.BDLG:hover{
-    color: black;
-    background-color: rgb(250, 87, 87);
-}
-
-.BDLD{
-    background-color: rgb(143, 221, 254); /* couleur initiale */
-    color: black;
-    padding: 10px 20px;
-    border: 2px solid black;
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-.BDLD:hover{
-    color: black;
-    background-color: rgb(250, 87, 87);
-}
-
-.fontCV{
     font-family: "Dancing Script", cursive;
-    font-size: 1.1vw;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    border-radius: 8px;
 }
 
-iframe{
-    margin-top: 5vw;
-    margin-left: 35vw;
-    width: 30vw; /* 80% de la largeur de la fenêtre */
-    height: calc(30vw * 9 / 16); /* Maintient le ratio 16:9 */
+button:hover {
+    background-color: rgb(250, 87, 87);
+    color: white;
 }
 
-.footer{
-    margin-top: auto;
-    top: 1vw;
-    bottom: 0;
+/* VIDÉO RESPONSIVE */
+#scrollVideo {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    border: 10px;
-    padding: 15px;         /* Espace à l'intérieur du rectangle */
-    box-shadow: 0px 2px 5px transparent;
-    background-color: whitesmoke;
-    position: relative;
-    white-space: nowrap;
+    justify-content: center;
+    margin: 60px 0;
+    padding: 0 20px;
 }
 
-.footer2{
-    top: 7vw;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    border: 10px;
-    padding: 15px;         /* Espace à l'intérieur du rectangle */
-    box-shadow: 0px 2px 5px transparent;
-    background-color: whitesmoke;
-    position: relative;
-    white-space: nowrap;
-}
-
-.gauche{
-    display: flex;
-    gap: 20%;
-    justify-content: space-between;
-    margin-left: 2%;
-}
-
-.prout{
-    list-style-type: none;
-}
-
-.droite {
-    display: flex;
-    gap: 20%; /* Ajustement de l'espacement */
-    justify-items: center;
-    justify-content: space-between;
-    text-align: center;
-    padding: 0 5vw; /* Ajout de padding pour éviter le débordement */
-    flex-wrap: nowrap; /* Permet aux éléments de ne pas se déplacer à la ligne */
-}
-
-.droite1, .droite2, .droite3 {
-    flex: 1; /* Ajustement flexible */
-    min-width: 100px; /* Largeur minimale pour éviter l'empilement */
-}
-
-@media (max-width: 768px) {
-    .gauche{
-        flex-direction: column; /* Empile les éléments sur petits écrans */
-        align-items: center; /* Centre les éléments */
-    }
-    .droite {
-        flex-direction: column; /* Empile les éléments sur petits écrans */
-        align-items: center; /* Centre les éléments */
-    }
-}
-
-.droite li{
-    list-style-type: none;
-}
-
-.gauche a:hover{
-    color: black;
-    text-decoration: underline;
-}
-
-.texte{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    align-content: center;
-    text-align: left;
-    left: 30%;
-    width: 40%;
+iframe {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9; /* Remplace le calcul de hauteur complexe */
     height: auto;
-    top: 100px;
-    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-.texte h1{
-    font-family:"Fuzzy Bubbles", sans-serif ;
-}
-
-.texte p{
-    font-family:"Fuzzy Bubbles", sans-serif ;
-}
-
-.texte li{
-    font-family:"Fuzzy Bubbles", sans-serif ;
-}
-
-.texte a{
-    text-decoration: underline;
-    font-family:"Fuzzy Bubbles", sans-serif ;
-}
-
-.texte2{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    text-align: left;
-    left: 30%;
-    width: 40%;
-    height: auto;
-    top: 120px;
-    position: relative;
-}
-
-.texte2 p{
-    font-family:"Fuzzy Bubbles", sans-serif ;
-}
-
-.texte3{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: left;
-    align-content: center;
-    text-align: left;
-    left: 30%;
-    width: 40%;
-    height: auto;
-    top: 100px;
-    position: relative;
-}
-
-.texte3 h1{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    left: 30%;
-    width: 40%;
-    height: auto;
-    position: relative;
-    font-family:"Fuzzy Bubbles", sans-serif ;
-}
-
-.texte3 h2{
-    font-family:"Fuzzy Bubbles", sans-serif ;
-}
-
-.texte3 p{
-    font-family:"Fuzzy Bubbles", sans-serif ;
-}
-
-.texte3 a{
-    text-decoration: underline;
-    font-family:"Fuzzy Bubbles", sans-serif ;
-}
-
-.texte4{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: left;
-    align-content: center;
-    text-align: left;
-    left: 30%;
-    width: 40%;
-    height: auto;
-    top: 100px;
-    position: relative;
-}
-
-.texte4 h1{
-    text-align: center;
-    font-family:"Fuzzy Bubbles", sans-serif ;
-}
-
-.texte4 ul li{
-    left: 2vw;
-    position: relative;
-    font-family:"Fuzzy Bubbles", sans-serif ;
-}
-
-.texte4 p{
-    font-family:"Fuzzy Bubbles", sans-serif ;
-}
-
-.texte4 a{
-    text-decoration: underline;
-    font-family:"Fuzzy Bubbles", sans-serif ;
-}
-
-.texte5{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: left;
-    align-content: center;
-    text-align: left;
-    left: 30%;
-    width: 40%;
-    height: auto;
-    top: 100px;
-    position: relative;
-}
-
-.texte5 h1{
-    text-align: center;
-    font-family:"Fuzzy Bubbles", sans-serif ;
-}
-
-.texte5 p{
-    font-family:"Fuzzy Bubbles", sans-serif ;
-}
-
-.texte5 a{
-    text-decoration: underline;
-    font-family:"Fuzzy Bubbles", sans-serif ;
-}
-
-.titre{
-    display: flex;
+/* TITRES PAGES INTERNES */
+.titre {
     background-color: royalblue;
-    align-items: center;
-    align-content: center;
+    padding: 40px 20px;
     text-align: center;
-    padding: 6vw;
-    position: relative;
+    margin-bottom: 40px;
 }
 
-.titre p{
-    display: flex;
-    align-items: center;
-    align-content: center;
-    top: 30px;
-    color: black;
+.titre p {
     font-family: "Sixtyfour", sans-serif;
-    font-size: 6vw;
-    position: relative;
+    font-size: clamp(1.5rem, 5vw, 3rem); /* Taille dynamique intelligente */
+    color: white;
 }
 
-.semester{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    text-align: left;
-    position: relative;
-    gap: 3vw;
-    top: 2vw;
-    font-size: 2vw;
-    width: 80%;
+/* CONTENU PAGES INTERNES */
+.contenu {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.semester p{
+.londres {
     display: flex;
     align-items: center;
-    align-content: center;
-    text-align: center;
-    width: 64%;
-    left: 3vw;
-    font-family: "Fuzzy Bubbles", sans-serif;
-    font-size: 1.4vw;
-    position: relative;
-    left: 10vw
+    gap: 30px;
+    background-color: whitesmoke;
+    padding: 30px;
+    border-radius: 15px;
 }
 
-.semester h2{
-    font-family: "Bubblegum Sans", sans-serif;
-    position: relative;
-    bottom: 1.2vw;
+.londres img {
+    width: 50%;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
-.semester ul{
+/* ENGINEERING COURSE */
+.semester {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.semester > div {
+    background-color: #f0f8ff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-left: 5px solid royalblue;
+}
+
+/* FOOTER */
+.footer, .footer2 {
+    background-color: #333; /* Gris foncé plus pro */
+    color: white;
+    padding: 40px 20px;
     display: flex;
-    flex-direction: column;
-    gap: 1.2vw;
-    font-size: 1.3vw;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
 }
 
-.semester li{
-    position: relative;
-    left: 4vw;
+.footer a {
+    color: lightskyblue;
 }
 
-.contenu{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    margin-top: 2vw;
+.footer ul {
+    list-style: none;
 }
 
-.londres{
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    position: relative;
-    margin-left: 9vw;
-    gap: 2%;
-}
+/* --- RESPONSIVE : LA PARTIE MAGIQUE --- */
+/* C'est ici qu'on gère les téléphones et tablettes */
+@media (max-width: 900px) {
+    
+    /* On cache la bande bleue latérale sur mobile pour aérer */
+    .couleur_fond {
+        display: none;
+    }
 
-.contenu img{
-    width: 40%;
-    height: auto;
-    border-radius: 12%;
-}
+    /* La navbar devient une colonne si besoin ou reste petite */
+    .navbar {
+        gap: 10px;
+    }
 
-.contenu div div{
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    height: auto;
-    position: relative;
-}
+    /* La présentation passe en colonne : Texte en haut, Photo en bas (ou l'inverse) */
+    .présentation {
+        flex-direction: column-reverse; /* Photo au dessus, texte en dessous ? ou column simple */
+        text-align: center;
+        margin-top: 20px;
+    }
 
-.contenu h1{
-    font-family: "Fuzzy Bubbles", sans-serif;
-}
+    .présentation_gauche {
+        text-align: center;
+    }
 
-.contenu p{
-    font-family: "Fuzzy Bubbles", sans-serif;
-    font-size: 1.4vw;
+    .présentation_droite {
+        width: 100%; /* Prend toute la largeur sur mobile */
+    }
+
+    /* Londres section en colonne */
+    .londres {
+        flex-direction: column;
+    }
+    .londres img {
+        width: 100%;
+    }
+
+    .titre p {
+        font-size: 1.5rem; /* Titre plus petit */
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
 }
