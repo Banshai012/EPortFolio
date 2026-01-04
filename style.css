@@ -252,6 +252,81 @@ iframe {
     list-style: none;
 }
 
+/* On utilise une police plus lisible pour le corps de texte */
+.main-content {
+    gap: 40px; /* Espace entre les cartes */
+    padding-bottom: 60px;
+    font-family: 'Poppins', sans-serif; /* Assure-toi d'avoir importé Poppins ou garde sans-serif */
+}
+
+/* STYLE DES CARTES (Cadres blancs) */
+.card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Ombre douce et moderne */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* La carte monte un peu au survol */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    /*font-family: "Sixtyfour", sans-serif; /* On garde ta police titre */
+    font-size: 1.8rem;
+    color: royalblue;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+/* IMAGES RESPONSIVES */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* NOUVEAUX BOUTONS (Plus modernes) */
+.bouton-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: rgb(143, 221, 254);
+    color: #333;
+    padding: 12px 30px;
+    border-radius: 50px; /* Bords très arrondis */
+    text-decoration: none;
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-primary:hover {
+    background-color: royalblue;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
 /* --- RESPONSIVE : LA PARTIE MAGIQUE --- */
 /* C'est ici qu'on gère les téléphones et tablettes */
 @media (max-width: 900px) {
@@ -295,6 +370,19 @@ iframe {
 
     .footer {
         flex-direction: column;
+        text-align: center;
+    }
+
+    .main-content {
+        padding: 0 15px 60px; /* Plus de marge sur mobile */
+    }
+    
+    .card {
+        padding: 20px;
+    }
+
+    .btn-primary {
+        width: 100%; /* Boutons pleine largeur sur mobile */
         text-align: center;
     }
 }
